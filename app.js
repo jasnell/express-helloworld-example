@@ -6,5 +6,5 @@ const server = app.listen(process.env.VCAP_APP_PORT || 3000, ()=> {
   let host = server.address().address;
   let port = server.address().port;
   if (host === '::') host = 'localhost';
-  console.log(`Example app listening at http://${host}:${port}`);
+  console.log('Example app listening at http://%s:%d', host, port);
 });
